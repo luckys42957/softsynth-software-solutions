@@ -1,0 +1,236 @@
+@keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 30px 0px;
+    white-space: nowrap;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    margin-top: -200px;
+  }
+
+  
+  
+  
+  .logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .logo_items:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+  
+  .logo_items:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+  
+  .logo_items {
+    display: inline-block;
+    animation: 35s slides infinite linear;
+  }
+  
+  .logos:hover .logo_items {
+    animation-play-state: paused;
+  }
+  
+  .logo_items img{
+    height: 100px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+   
+  /* body{
+    background: #e9edd6;
+    font-family: 'Poppins', sans-serif;
+  } */
+
+
+  *{
+    box-sizing: border-box;
+  }
+  .owl-carousel.version-1, .owl-carousel.version-2{
+    position: relative;
+    padding: 15px 35px 0;
+  }
+  .logo-slider-1, .logo-slider-2{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .owl-carousel .owl-item {
+      background: #fff;
+      padding: 0 0px
+  }
+  .owl-nav button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      height: 30px;
+      background: #fff !important;
+      border-radius: 50%;
+      margin: auto 0;
+      box-shadow: 0px 0px 5px #00000069;
+  }
+  .owl-nav button.owl-next{
+    right: 0;
+  }
+  .owl-nav button.owl-prev{
+    left: 0;
+  }
+  .version-2 h2 {
+      margin: 0px;
+      font-size: 20px;
+  }
+  .version-2 p {
+      font-size: 15px;
+  }
+  .version-2 .owl-item{
+    text-align: center;
+    padding: 10px 20px 20px;
+  }
+  .version-2 .owl-item img{
+    width: 160px;
+    margin: 0 auto;
+  }
+
+
+
+
+
+  
+
+/*** Header carousel ***/
+
+
+@media (max-width: 768px) {
+  .header-carousel .owl-carousel-item {
+      position: relative;
+      min-height: 500px;
+  }
+  
+  .header-carousel .owl-carousel-item img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+
+}
+
+
+
+
+/* 
+.container-fluid{
+  overflow-x: hidden;
+} */
+
+.header-carousel{
+  overflow: hidden;
+  overflow-x: hidden;
+  /* height: 100vh; */
+}
+
+.header-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+  margin: 7px 0;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  font-size: 22px;
+  transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.page-header {
+  background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.page-header-inner {
+  background: rgba(15, 23, 43, .7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--light);
+}
+
+
+/*** Section Title ***/
+.section-title {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 80px);
+  height: 2px;
+  top: 4px;
+  left: -40px;
+  background: var(--primary);
+  z-index: -1;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 120px);
+  height: 2px;
+  bottom: 5px;
+  left: -60px;
+  background: var(--primary);
+  z-index: -1;
+}
+
+.section-title.text-start::before {
+  width: calc(100% + 40px);
+  left: 0;
+}
+
+.section-title.text-start::after {
+  width: calc(100% + 60px);
+  left: 0;
+}
